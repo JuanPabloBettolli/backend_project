@@ -16,8 +16,7 @@ class CreatePostsTable extends Migration
         {
             Schema::create('posts', function (Blueprint $table) {
                 $table->id();
-                $table->unsignedBigInteger('category_id');
-                
+                //$table->unsignedBigInteger('category_id');
                 //Ver si falta TITLE y el category_id solo id
 
                 $table->text('summary');
