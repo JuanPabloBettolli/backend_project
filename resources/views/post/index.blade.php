@@ -12,24 +12,22 @@
            </tr>
        </thead>
        <tbody>
-            @if(count($Posts)>=1)
-                <tr>
-                    @foreach ($POSTS as $POST)
-                         <td scope="row"> {{$Post->ID}}</td>
-                         <td>{{$Post->TITLE}}</td>
-                         <td>{{$Post->AUTHOR}}</td>
-                         <td> Editar | Borrar</td>
+            @if(count($posts)>=1)
+                
+                    @foreach ($Posts as $Post)
+                        <tr>
+                            <td scope="row"> {{$Post->ID}}</td>
+                            <td>{{$Post->TITLE}}</td>
+                            <td>{{$Post->AUTHOR}}</td>
+                            <td> Editar | Borrar</td>
+                        </tr>
                     @endforeach
-                   
-                </tr>
             @else
                 <tr>
                     <td scope="row">{{"NO ENCONTRO RESULTADOS"}}</td>
                 </tr>
 
-            @endif                
-
-           
+            @endif                           
        </tbody>
    </table>
 
