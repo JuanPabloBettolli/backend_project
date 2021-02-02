@@ -16,16 +16,14 @@ class CreatePostsTable extends Migration
         {
             Schema::create('posts', function (Blueprint $table) {
                 $table->id();
-                //$table->unsignedBigInteger('category_id');
-                //Ver si falta TITLE y el category_id solo id
-
+                $table->text('title');
                 $table->text('summary');
                 $table->text('image');
                 $table->text('description');
                 $table->text('author');
                 $table->timestamps();
     
-                $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');    
+                //$table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');    
             });
             
         }
